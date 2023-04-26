@@ -20,5 +20,5 @@ public interface ReactionData {
     boolean me();
 
     /** emoji information */
-    EmojiData emoji();
+    EmojiItemData emoji();
 }
