@@ -29,5 +29,5 @@ public interface TeamMemberData {
     Id teamId();
 
     /** the avatar, discriminator, id, and username of the user */
-    UserData user();
+    TeamUserData user();
 }

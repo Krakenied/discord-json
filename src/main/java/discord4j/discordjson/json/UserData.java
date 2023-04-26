@@ -3,7 +3,6 @@ package discord4j.discordjson.json;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 import com.fasterxml.jackson.databind.annotation.JsonSerialize;
-import discord4j.discordjson.Id;
 import discord4j.discordjson.possible.Possible;
 import org.immutables.value.Value;
 
@@ -12,23 +11,11 @@ import java.util.Optional;
 @Value.Immutable
 @JsonSerialize(as = ImmutableUserData.class)
 @JsonDeserialize(as = ImmutableUserData.class)
-public interface UserData {
+public interface UserData extends TeamUserData {
 
     static ImmutableUserData.Builder builder() {
         return ImmutableUserData.builder();
     }
-
-    /** the user's id */
-    Id id();
-
-    /** the user's username, not unique across the platform */
-    String username();
-
-    /** the user's 4-digit discord-tag */
-    String discriminator();
-
-    /** the user's avatar hash */
-    Optional<String> avatar();
 
     /** whether the user belongs to an OAuth2 application */
     Possible<Boolean> bot();
