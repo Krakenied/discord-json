@@ -31,6 +31,6 @@ public interface EmojiData extends EmojiItemData {
     /** whether this emoji is managed */
     Possible<Boolean> managed();
 
-    /** whether this emoji is animated */
+    /** whether this emoji can be used, may be false due to loss of Server Boosts */
     Possible<Boolean> available();
 }

@@ -23,6 +23,6 @@ public interface EmojiItemData {
     /** emoji name */
     Optional<String> name();
 
-    /** whether this emoji can be used, may be false due to loss of Server Boosts */
+    /** whether this emoji is animated */
     Possible<Boolean> animated();
 }
